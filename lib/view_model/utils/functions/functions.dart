@@ -21,8 +21,8 @@ void typeModelBottomSheet(BuildContext context){
           return Container(
             height: 346.h, width: 375.w,
             padding: EdgeInsetsDirectional.only(
-                start: 8.w, top: 24.h,
-                end: 8.w, bottom: 24.h
+                start: 8.w, top: 16.h,
+                end: 8.w, bottom: 16.h
             ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(topRight: Radius.circular(12.r),
@@ -31,6 +31,14 @@ void typeModelBottomSheet(BuildContext context){
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                SizedBox(width: 80.w,
+                  child: Divider(
+                    height: 3.h,
+                    color: Colors.grey,
+
+                  ),
+                ),
+                SizedBox(height: 5.h,),
                 CustomText(text: "Race Type".toUpperCase(),color: Color(0xff000A35),
                   fontWeight: FontWeight.w900,fontSize: 22.sp,),
                 Row(
@@ -119,6 +127,14 @@ void locationModelBottomSheet(BuildContext context){
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
+                SizedBox(width: 80.w,
+                  child: Divider(
+                    height: 3.h,
+                    color: Colors.grey,
+
+                  ),
+                ),
+                SizedBox(height: 10.h,),
                 CustomText(text: "Race Location".toUpperCase(),color: Color(0xff000A35),
                   fontWeight: FontWeight.w900,fontSize: 22.sp,),
                 SizedBox(height: 20.h,),
@@ -182,9 +198,22 @@ void dateModelBottomSheet(BuildContext context){
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+
             Center(
-              child: CustomText(text: "Race Date".toUpperCase(),color: Color(0xff000A35),
-                fontWeight: FontWeight.w900,fontSize: 22.sp,),
+              child: Column(
+                children: [
+                  SizedBox(width: 80.w,
+                    child: Divider(
+                      height: 3.h,
+                      color: Colors.grey,
+
+                    ),
+                  ),
+                  SizedBox(height:10.h,),
+                  CustomText(text: "Race Date".toUpperCase(),color: Color(0xff000A35),
+                    fontWeight: FontWeight.w900,fontSize: 22.sp,),
+                ],
+              ),
             ),
             SizedBox(height: 20.h,),
             CustomText(text: "From",color: Color(0xff000A35),
@@ -311,7 +340,6 @@ void dateModelBottomSheet(BuildContext context){
                     }
                   },
                   );
-
                 },
               ),
             ),
@@ -364,19 +392,9 @@ void distanceModelBottomSheet(BuildContext context){
 
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Center(
-                        child: CustomText(text: "Race Distance".toUpperCase(),color: Color(0xff000A35),
-                          fontWeight: FontWeight.w900,fontSize: 22.sp,),
-                      ),
-                    ),
-                    CustomText(text: "reset",color: Color(0xffBD5000),
-                      fontWeight: FontWeight.w700,fontSize: 14.sp,),
-                    SizedBox(width: 10.w,),
-                  ],
+                Center(
+                  child: CustomText(text: "Race Distance".toUpperCase(),color: Color(0xff000A35),
+                    fontWeight: FontWeight.w900,fontSize: 22.sp,),
                 ),
                 Row(
                   children: [
@@ -436,6 +454,14 @@ void filterModelBottomSheet(BuildContext context){
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                SizedBox(width: 80.w,
+                  child: Divider(
+                    height: 3.h,
+                    color: Colors.grey,
+
+                  ),
+                ),
+                SizedBox(height: 5.h,),
                 CustomText(text: "Clear Filters".toUpperCase(),color: Color(0xff000A35),
                   fontWeight: FontWeight.w900,fontSize: 22.sp,),
                 CustomElevatedButton(
